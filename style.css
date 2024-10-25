@@ -151,34 +151,49 @@ footer ul li {
     background-color: #bbdefb;
     padding: 20px;
     border-radius: 5px;
-    margin: 20px;
-    text-align: left;
+    margin: 20px auto;
+    max-width: 600px; /* Ограничиваем максимальную ширину формы */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Первая колонка для лейблов, вторая для полей */
+    grid-gap: 15px; /* Промежуток между строками и колонками */
+    align-items: center; /* Центрирование всех элементов по вертикали */
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+/* Заголовок формы */
+#booking h2 {
+    grid-column: span 2; /* Заголовок занимает обе колонки */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Лейблы */
 form label {
-    margin: 10px 0 5px;
+    text-align: right; /* Выравниваем текст лейблов по правому краю */
+    padding-right: 10px;
 }
 
+/* Поля ввода и select */
 form input,
 form select {
     padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #90caf9;
     border-radius: 5px;
+    width: 100%; /* Поля занимают всю доступную ширину */
+    box-sizing: border-box;
 }
 
+/* Кнопка отправки */
 form input[type="submit"] {
+    grid-column: span 2; /* Кнопка отправки занимает обе колонки */
     background-color: #2196f3;
     color: white;
     border: none;
     cursor: pointer;
+    padding: 10px;
+    text-align: center;
 }
 
+/* Эффект при наведении на кнопку */
 form input[type="submit"]:hover {
     background-color: #1976d2;
 }
