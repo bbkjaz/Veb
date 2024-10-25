@@ -1,0 +1,191 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e0f7fa;
+}
+
+/* Шапка сайта */
+header {
+    background: #1976d2;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Слайдер */
+#slider {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+
+.slider-container {
+    display: flex;
+    animation: slide 12s infinite;
+}
+
+.slider-container img {
+    width: 100%; /* Задаем ширину 100% для адаптивности */
+    height: auto; /* Высота будет автоматически подстраиваться для сохранения пропорций */
+    max-height: 300px; /* Установим максимальную высоту для слайдера */
+}
+
+/* Анимация слайдера */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(0); }
+    100% { transform: translateX(0); }
+}
+
+/* Раздел с автомобилями */
+#products {
+    background-color: #bbdefb;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.center-title {
+    text-align: center;
+    color: #0d47a1;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+article {
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    padding: 10px;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    background-color: white;
+}
+
+article:hover {
+    transform: scale(1.05);
+}
+
+/* Центрирование кнопки */
+.center-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Кнопка */
+.cta-button {
+    display: inline-block;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* О нас */
+.about-section {
+    background-color: #bbdefb;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1976d2;
+    color: #fff;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Стили для формы бронирования */
+#booking {
+    background-color: #bbdefb;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1976d2;
+}
+
+/* Установка стилей для изображений автомобилей */
+.product-list img {
+    width: 100%; /* Задаем ширину 100% от родительского контейнера */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+    height: auto; /* Сохраняем пропорции */
+}
